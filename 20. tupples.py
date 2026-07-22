@@ -26,21 +26,37 @@
 
 # packing and unpacking tupples
 
+# def main():
+#     elements = (True, 3.2, 7, "goat") #putting item in the tupple is called packing
+
+#     # unpacking tupples
+#     (is_raining, weight, volume, animal) = elements
+#     print(is_raining, weight, volume, animal)
+
+
+#     fruits = ("apple", "orange", "banana", "strawberry", "pear") #or "apple", "orange", "banana", "strawberry", "pear"
+#     (fruit1, fruit2, fruit3, *more_fruits) = fruits
+#     # or fruit1, fruit2, fruit3, *more_fruits = fruits
+#     print(fruit1, fruit2, fruit3, more_fruits)
+
+#     # to get the last fruits
+#     # (fruit1, fruit2, *more_fruits  fruit3,) = fruits
+#     print(type(more_fruits))
+
+# main()
+
+
+
+# slicing tupples
 def main():
-    elements = (True, 3.2, 7, "goat") #putting item in the tupple is called packing
+    animals = ("dog", "cat", "tigger", "goat", "wolf")
 
-    # unpacking tupples
-    (is_raining, weight, volume, animal) = elements
-    print(is_raining, weight, volume, animal)
+    print(animals[1]) #dog
+    print(animals[1:3]) # 1-3
+    print(animals[0:3]) #0-3
+    print()
+    print(animals[-1]) # gives last element
+    print(animals[-3:-1]) # gives tigger and goat
 
-
-    fruits = ("apple", "orange", "banana", "strawberry", "pear") #or "apple", "orange", "banana", "strawberry", "pear"
-    (fruit1, fruit2, fruit3, *more_fruits) = fruits
-    # or fruit1, fruit2, fruit3, *more_fruits = fruits
-    print(fruit1, fruit2, fruit3, more_fruits)
-
-    # to get the last fruits
-    # (fruit1, fruit2, *more_fruits  fruit3,) = fruits
-    print(type(more_fruits))
 
 main()
