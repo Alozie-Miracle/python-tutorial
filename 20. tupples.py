@@ -48,15 +48,41 @@
 
 
 # slicing tupples
-def main():
-    animals = ("dog", "cat", "tigger", "goat", "wolf")
+# def main():
+#     animals = ("dog", "cat", "tigger", "goat", "wolf")
 
-    print(animals[1]) #dog
-    print(animals[1:3]) # 1-3
-    print(animals[0:3]) #0-3
-    print()
-    print(animals[-1]) # gives last element
-    print(animals[-3:-1]) # gives tigger and goat
+#     print(animals[1]) #dog
+#     print(animals[1:3]) # 1-3
+#     print(animals[0:3]) #0-3
+#     print()
+#     print(animals[-1]) # gives last element
+#     print(animals[-3:-1]) # gives tigger and goat
 
 
-main()
+# main()
+
+
+# tupple function and operators
+
+numbers1 = 1, 2, 3, 4, 4, 5, 8
+
+print(len(numbers1))
+print(min(numbers1))
+print(max(numbers1))
+
+# count gives us how many 4s are in the tupple
+print(numbers1.count(4))
+
+# index tells us at what position is the number in
+print(numbers1.index(8))
+
+# adding tupples together
+print(numbers1 + (10, 20))
+
+# multiplying tupple
+print((1, 2, 3) * 3)
+
+
+# to create a tupple with only one item in it
+numbers2 = (15, )
+print(numbers2)
