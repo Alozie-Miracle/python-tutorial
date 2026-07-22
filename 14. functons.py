@@ -60,15 +60,35 @@
 
 
 # function ids
-def greet(name): #name is a parameter
-    print(f"Hello, {name}!")
-    print(f"Function ID of greet: {id(name)}")
+# def greet(name): #name is a parameter
+#     print(f"Hello, {name}!")
+#     print(f"Function ID of greet: {id(name)}")
+
+
+# def main():
+#     user_name = 'zypher'
+#     print(f"Function ID of greet: {id(user_name)}")
+#     greet(user_name) #user_name is an argument
+
+
+# main()
+
+
+
+# function paramters
+def greet(name):
+    print("Hello, " + name + "!")
+
+    print("Function ID of greet: " + name)
+    name = "Rachel"
+    print("Function ID of greet after changing name: " + name)
 
 
 def main():
-    user_name = 'zypher'
-    print(f"Function ID of greet: {id(user_name)}")
-    greet(user_name) #user_name is an argument
+    name = "John"
 
+    print("Before calling greet function: " + name)
+    greet(name)
+    print("After calling greet function: " + name)
 
 main()
