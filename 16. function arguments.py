@@ -31,7 +31,7 @@
 
 # variable length argument
 
-# def describe_person(name, *attributes): # *attributes -> variable length argument
+# def describe_person(name, *attributes): # *attributes -> variable length argument know as *args
 #     print(name)
 
 #     # print(type(attributes)) #tupple
@@ -49,7 +49,7 @@
 
 # variable length keyword arguments
 
-def add_description(**description): #**description -> variable length keyword arguments
+def add_description(**description): #**description -> variable length keyword arguments know as **kwargs
     # print(type(description)) #dict
     # print(description)
 
