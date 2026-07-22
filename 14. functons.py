@@ -76,19 +76,56 @@
 
 
 # function paramters
-def greet(name):
-    print("Hello, " + name + "!")
+# def greet(name):
+#     print("Hello, " + name + "!")
 
-    print("Function ID of greet: " + name)
-    name = "Rachel"
-    print("Function ID of greet after changing name: " + name)
+#     print("Function ID of greet: " + name)
+#     name = "Rachel"
+#     print("Function ID of greet after changing name: " + name)
 
+
+# def main():
+#     name = "John"
+
+#     print("Before calling greet function: " + name)
+#     greet(name)
+#     print("After calling greet function: " + name)
+
+# main()
+
+
+
+# returning values from functions
+# def greet(name):
+#     print(f"Hi, {name}!")
+
+
+# def create_greeting(name):
+#     return f"Hello, {name}!"
+
+# def main():
+#     name = "John"
+#     greet(name)
+
+#     greeting = create_greeting(name)
+#     print(greeting)
+
+
+# main()
+
+
+# passing multiple arguments to functions
+def add_numbers(num1, num2):
+    return num1 + num2
+
+def volume_of_cuboid(length, width, height):
+    return length * width * height
 
 def main():
-    name = "John"
+    result = add_numbers(5, 3)
+    print(f"The sum is: {result}")
 
-    print("Before calling greet function: " + name)
-    greet(name)
-    print("After calling greet function: " + name)
+    volume = volume_of_cuboid(5, 3, 2)
+    print(f"The volume of the cuboid is: {volume}")
 
 main()
