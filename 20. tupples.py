@@ -2,24 +2,45 @@
 # tupples are ordered
 # tupples are list of things
 
+# def main():
+#     animals = ("dog", "cat", "tigger", "cat", "wolf")
+
+#     print(type(animals))
+
+#     number_of_animals = len(animals)
+#     print(number_of_animals) 
+
+#     print(animals[0]) #dog
+
+#     print()
+
+#     for animal in animals:
+#         print(animal)
+
+#     print()
+#     for i in range(0, len(animals)):
+#         print(animals[i])
+
+
+# main()
+
+# packing and unpacking tupples
+
 def main():
-    animals = ("dog", "cat", "tigger", "cat", "wolf")
+    elements = (True, 3.2, 7, "goat") #putting item in the tupple is called packing
 
-    print(type(animals))
+    # unpacking tupples
+    (is_raining, weight, volume, animal) = elements
+    print(is_raining, weight, volume, animal)
 
-    number_of_animals = len(animals)
-    print(number_of_animals)
 
-    print(animals[0]) #dog
+    fruits = ("apple", "orange", "banana", "strawberry", "pear") #or "apple", "orange", "banana", "strawberry", "pear"
+    (fruit1, fruit2, fruit3, *more_fruits) = fruits
+    # or fruit1, fruit2, fruit3, *more_fruits = fruits
+    print(fruit1, fruit2, fruit3, more_fruits)
 
-    print()
-
-    for animal in animals:
-        print(animal)
-
-    print()
-    for i in range(0, len(animals)):
-        print(animals[i])
-
+    # to get the last fruits
+    # (fruit1, fruit2, *more_fruits  fruit3,) = fruits
+    print(type(more_fruits))
 
 main()
