@@ -44,4 +44,18 @@ result = re.match(
 
 id, content = result.groups()
 
-print(id, content)
+
+result = re.match(
+    r"""
+        <(\w+)\s+    # Match opening tag
+        id='(\w+)'   # Match Id attribute
+        >          # Match of opening tag
+        ([^<>]+)    # Match content of tag
+        </\1>     # Gives the first opening tag
+
+    """, 
+    tag, re.VERBOSE)
+
+tag, id, content = result.groups()
+
+print(tag, id, content)
