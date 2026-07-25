@@ -1,5 +1,5 @@
 # fint the regular expression for john.purcell@caveprogramming.com
-
+# [] is a character class
 import re
 
 # result = re.match("[a-z/.@]+", "john.purcell@caveprogramming.com")
