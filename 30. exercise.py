@@ -71,6 +71,19 @@ def add_book(library):
         print()
 
 
+def find_book(library):
+    book = input("Enter book name: ")
+     
+    for val in library.values():
+        for item in val:
+            if book.lower() == item.lower():
+                print(f"{book.title()} found.")
+                return
+
+    print(f"{book} not in the library.")
+    
+
+
 def main():
     library = {
         "Science Fiction": {"Journey to the Centre of the Earth", "Day of the Triffids"},
@@ -80,10 +93,11 @@ def main():
     print("Welcome to our library")
     print("1. Show Categories")
     print("2. Add Book")
-    print("3. quit")
+    print("3. Find Book")
+    print("4. quit")
 
     option = input("Pick option: ").lower()
-    if option == 'quit' or option == '3':
+    if option == 'quit' or option == '4':
         quit()
 
     if option == '1' or option == 'show categories':
@@ -94,7 +108,9 @@ def main():
     if option == "2" or option == "add book":
         print()
         add_book(library)
-
+    
+    if option == "3" or option == "find book":
+        find_book(library)
 
 
 
