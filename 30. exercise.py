@@ -33,6 +33,7 @@ def add(book, library):
     pass
 
 
+
 def show_categories(library):
     print()
     print("Categories")
@@ -54,19 +55,35 @@ def show_category(response, library):
                 for i, book in enumerate(library[category]):
                     print(f"{i}. {book}")
 
+def add_book(library):
+    category = input("Enter category name: ")
+    book = input("Enter book name: ")
+
+    if not category in library:
+        library[category] = set()
+
+    library[category.title()].add(book) #you can also use .update({ book })
+    print(f"{book} added to {category.title()} category")
+    for i, category in enumerate(library):
+        print(f"{category}: ")
+        for j, book in enumerate(library[category]):
+            print(f"{j + 1}. {book}")
+        print()
+
 
 def main():
     library = {
         "Science Fiction": {"Journey to the Centre of the Earth", "Day of the Triffids"},
         "Drama": {"A Tale of Two Cities", "Moby Dick"}
     }
-
+    print()
     print("Welcome to our library")
     print("1. Show Categories")
-    print("2. quit")
+    print("2. Add Book")
+    print("3. quit")
 
     option = input("Pick option: ").lower()
-    if option == 'quit' or option == '2':
+    if option == 'quit' or option == '3':
         quit()
 
     if option == '1' or option == 'show categories':
@@ -74,9 +91,14 @@ def main():
         response = input("Pick a category: ").lower()
         show_category(response, library)
 
+    if option == "2" or option == "add book":
+        print()
+        add_book(library)
 
 
 
 
 
-main()
+while True:
+    main()
+
