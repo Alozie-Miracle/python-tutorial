@@ -79,3 +79,84 @@ class Cat:
 
 # cat = Cat("Purity", 1.2)
 # print(cat)
+
+
+
+
+# getters and setters
+
+class Machine:
+    def __init__(self, name, id):
+        self._name = name
+        self._id = id
+
+    def __str__(self):
+        return f"Name: {self._name}"
+
+    
+    def get_name(self):
+        return self._name
+
+    def set_id(self, id):
+        self._id = id
+
+    def get_id(self):
+        return self._id
+
+# m = Machine("THX12344", "1345tfds")
+
+# print(m.get_name())
+
+# m.set_id("ftyjnbsy8765r")
+
+# print(m.get_id())
+
+
+# inheritance
+class Car(Machine):
+    pass
+
+
+car = Car("Lexus", "123")
+# print(car.get_name())
+
+
+
+# Overriding methods
+class Animal:
+    def speak(self):
+        print("I am an animal")
+
+    def eat(self):
+        print("Animal eating")
+
+class Cat(Animal):
+    def speak(self):
+        print("I am a cat")
+
+
+# animal = Animal()
+# animal.speak()
+
+# cat = Cat()
+# cat.speak()
+
+
+# super class constructor
+class Machine:
+    def __init__(self, name, id):
+        self._name = name
+        self._id = id
+
+
+class Car(Machine):
+    def __init__(self, id, name, type):
+        # Machine.__init__(self, name, id)
+        super().__init__(name, id)
+        self._type = type
+
+    def __str__(self):
+        return f'{self._id}: {self._name}'
+
+car = Car("Benz", 123, "GLE")
+print(car)
