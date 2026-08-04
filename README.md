@@ -31,6 +31,6 @@ This repository contains step-by-step tutorials, code examples, exercises, and p
 ├── 08_error_handling/              # Decorators, generators, context managers
 ├── 09_object_oriented_programming  # Reading, writing, and managing files
 ├── 10_modules_packages/            # Importing modules, virtual environments
-└── 11_operators/                   
-└── 12_functional_programming/                   
+├── 11_operators/                   
+├── 12_functional_programming/                   
 └── 13_reading_and_writing_files/                   
